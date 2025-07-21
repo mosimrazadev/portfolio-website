@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.3s ease;
+  font-size: 20px;
+}
+
+body.dark {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+
+.navbar a {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0066ff;
+  cursor: pointer;
+}
+
+.navbar span {
+  color: #000;
+}
+
+body.dark .logo span {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #0066ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0066ff;
+}
+
+
+#darkModeToggle {
+  font-size: 26px;
+  color: #0066ff;
+  cursor: pointer;
+}
+
+/* Hamburger / Menu icon */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #0066ff;
+  z-index: 1100;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 160px 125px 125px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 400px;
+}
+
+.hero-text h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-text h3 {
+  font-size: 34px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-text p {
+  font-size: 22px;
+  color: #121212;
+  margin-bottom: 35px;
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: #0066ff;
+}
+
+.social-icons {
+  margin: 35px 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  color: #0066ff;
+  border-radius: 16px;
+  background-color: transparent;
+  margin: 0 10px;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px #0066ff;
+}
+
+.social-icons a:hover {
+  background-color: #0066ff;
+  color: #ffffff;
+  box-shadow: 0 0 10px #0f6fff;
+  transform: scale(1.3);
+}
+
+.cv-btn {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 13px 23px;
+  color: #0066ff;
+  border: 2.5px solid #0066ff;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 18px;
+  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+  background-color: #0066ff;
+  color: white;
+  box-shadow: 0 0 10px #0f6fff;
+  transform: scale(1.12);
+}
+
+/* Image Circle */
+.hero-img {
+  flex: 1;
+  min-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.glow-ring {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #0066ff, #3f8cff);
+  padding: 10px;
+  box-shadow: 0 0 50px #0f6fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 25px;
+    flex-direction: row;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    padding: 30px 25px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  body.dark .nav-links {
+    background-color: #111111;
+  }
+
+  .nav-links a {
+    padding: 18px 0;
+    font-size: 24px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 130px 30px 70px;
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 50px;
+  }
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 20px;
+}
+
+.switch-thumb {
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+body.dark .toggle-switch {
+  background-color: #aaa;
+}
+
+body.dark .switch-thumb {
+  transform: translateX(30px);
+  background-color: #fff;
+}
+
+.switch-thumb i {
+  color: #fff;
+  font-size: 16px;
+}
+
+body.dark .switch-thumb i {
+  color: #000;
+}
+
+body.dark .navbar {
+  background-color: #111111;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+body.dark .navbar span{
+  color: #fff;
+}
+
+body.dark p{
+  background-color: #111111;
+  color: #fff;
+  transition: all 1s ease-in-out;
+}
+
+/* Highlight active link with color + line */
+.nav-link {
+  position: relative;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #0066ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #0066ff;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.page-section {
+  padding: 100px 125px;
+  min-height: 100vh;
+}
+
+  
+.custom-toast {
+  font-size: 0.9rem;
+  padding-right: 2rem;
+  position: relative;
+  overflow: hidden; /* ✅ this prevents progress bar overflow */
+}
+
+.custom-toast::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  animation: progressBar 3s linear forwards;
+  background-color: #22c55e; 
+}
+
+.custom-toast .toast-close {
+  margin-left: 10px; 
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

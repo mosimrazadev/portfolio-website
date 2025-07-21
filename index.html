@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mosim Raza - Portfolio</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    
+    <a href="#home" class="nav-link">Mosim<span> Raza</span></a>
+    <div class="menu-toggle" id="menuToggle"><i class="ri-menu-line"></i></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about-section" class="nav-link">About</a>
+      <a href="#skills-section" class="nav-link">Skills</a>
+      <a href="#projects-section" class="nav-link">Projects</a>
+      <a href="#contact-section" class="nav-link">Contact</a>
+      <div class="toggle-switch" id="darkModeToggle">
+        <div class="switch-thumb">
+          <i class="ri-moon-line" id="moonIcon"></i>
+          <i class="ri-sun-line" id="sunIcon" style="display: none;"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, I'm</h2>
+      <h1>Mosim Raza</h1>
+      <h3>And I'm a <span class="highlight" id="typing"></span></h3>
+      <p>"I’m Mosim Raza, a passionate Full-Stack developer with strong expertise in HTML5, CSS3, and JavaScript, and hands-on experience with modern full-stack technologies like React.js, Node.js, Express, and MongoDB."</p>
+      <div class="social-icons">
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-github-fill"></i></a>
+        <a href="#"><i class="ri-linkedin-fill"></i></a>
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+      </div>
+      <a href="#" class="cv-btn">Download CV</a>
+      <a href="#" class="cv-btn">Hire Me</a>
+    </div>
+    <div class="hero-img">
+      <div class="glow-ring">
+        <img src="assets/welcome.png" alt="Profile Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Sections -->
+  <section id="about-section" class="page-section"></section>
+  <section id="skills-section" class="page-section"></section>
+  <section id="projects-section" class="page-section"></section>
+  <section id="contact-section" class="page-section"></section>
+  <section id="footer-section" class="footer-section"></section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
