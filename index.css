@@ -374,7 +374,7 @@ body.dark p{
   font-size: 0.9rem;
   padding-right: 2rem;
   position: relative;
-  overflow: hidden; /* ✅ this prevents progress bar overflow */
+  overflow: hidden;
 }
 
 .custom-toast::after {
