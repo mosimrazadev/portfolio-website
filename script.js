@@ -57,7 +57,9 @@ navLinks.forEach(link => {
                 close: true,
               }).showToast();
               
-              form.reset(); 
+              setTimeout(() => {
+                form.submit();
+              }, 3500);
             });
           }
         }
