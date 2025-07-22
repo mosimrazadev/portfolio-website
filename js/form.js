@@ -45,6 +45,6 @@ export function initContactForm() {
     // ⏱ Delay reset slightly to avoid issues
     setTimeout(() => {
       form.reset();
-    }, 500); // 0.5s delay
+    }, 2500); // 0.5s delay
   });
 }
